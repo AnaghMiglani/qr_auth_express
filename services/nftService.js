@@ -1,11 +1,9 @@
 require("dotenv").config();
 const { ethers } = require("ethers");
 
-// Initialize Provider & Wallet
 const provider = new ethers.JsonRpcProvider(process.env.ALCHEMY_API_URL);
 const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 
-// Load Contract
 const contractABI = require("../abi.json");
 const contract = new ethers.Contract(
   process.env.CONTRACT_ADDRESS,

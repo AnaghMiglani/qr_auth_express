@@ -4,7 +4,7 @@ const nftService = require("../services/nftService");
 
 // Mint NFT Route
 router.post("/mint", async (req, res) => {
-  console.log("Received Request Body:", req.body); // Check what's received
+  console.log("Received Request Body:", req.body);
 
   const { serialNumber, tokenURI } = req.body;
   console.log("Extracted Values:", { serialNumber, tokenURI });
